@@ -1,9 +1,26 @@
+<?php
+  $female       = isset($data[0]->female_name) ? $data[0]->female_name : "";
+  $female_index = strpos($female, ' '); 
+  $female_short = substr($female,0,$female_index);
+
+  $male         = isset($data[0]->male_name) ? $data[0]->male_name : "";
+  $male_index   = strpos($male, ' '); 
+  $male_short   = substr($male,0,$male_index);
+
+  $hari         = isset($data[0]->hari) ? $data[0]->hari : "";
+  $tanggal      = isset($data[0]->tanggal) ? $data[0]->tanggal : "";
+  $bulan        = isset($data[0]->bulan) ? $data[0]->bulan : "";
+  $tahun        = isset($data[0]->tahun) ? $data[0]->tahun : "";
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ADAT 3</title>
+    <title><?=$female_short;?> & <?=$male_short;?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,8 +44,8 @@
       </div>
       <div class="title">
         <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
-        <div class="nama">Rossa & Iwan</div>
-        <div class="tanggal">Minggu, 20 Desember 2024</div>
+        <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
+        <div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>
         <div class="tombol"><button>Buka Undangan</button></div>
       </div>
     </section>
