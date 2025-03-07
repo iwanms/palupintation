@@ -4,6 +4,7 @@
 	--roboto: "Roboto", serif;
 	--hijau: #c0d4af;
 	--width: 393px;
+	--quicksand: "Quicksand", serif;
 }
 html,
 body {
@@ -19,6 +20,91 @@ body {
 	min-height: 100vh;
 	width: 393px;
 }
+.slide-pembuka {
+	background-image: url(img/bg-bunga.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.slide-pembuka::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	opacity: 0.5;
+	z-index: 1;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	font-family: var(--italiano);
+	color: var(--coklat);
+	text-align: center;
+	font-size: 3rem;
+	padding-top: 35px;
+}
+.slide-pembuka .box-transparent {
+	content: "";
+	background-color: var(--hijau);
+	color: var(--coklat);
+	text-align: center;
+	padding: 10px 30px 40px 30px;
+	margin: 0 30px 0 30px;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.slide-pembuka .box-transparent img {
+	width: 100%;
+	margin-top: 83px;
+}
+.slide-pembuka .box-transparent .nama {
+	font-family: var(--italiano);
+	color: var(--coklat);
+	font-size: 3rem;
+	letter-spacing: 1px;
+	margin-top: 20px;
+}
+.slide-pembuka .box-transparent .guest {
+	margin-top: 50px;
+	font-family: var(--quicksand);
+	color: var(--coklat);
+	font-size: 0.9rem;
+	font-weight: bold;
+	line-height: 30px;
+}
+.slide-pembuka .box-transparent .tombol {
+	margin-top: 50px;
+	margin-bottom: 91px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.slide-pembuka .box-transparent .tombol a {
+	background-color: var(--coklat);
+	padding: 10px 20px 10px 20px;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 0.8rem;
+	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.3);
+	width: 120px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: var(--roboto);
+}
+.slide-pembuka .box-transparent .tombol button:hover {
+	background-color: #fff;
+	color: var(--coklat);
+}
+
+/* SLIDE SATU */
 .slide-satu {
 	background-image: url(img/bg-bunga.jpg);
 	background-size: cover;
@@ -99,6 +185,19 @@ body {
 .box-doa {
 	width: var(--width);
 	background-color: var(--hijau);
+	position: relative;
+	display: inline-block;
+}
+.box-doa::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
 }
 .box-doa .doa {
 	padding: 50px 30px 30px 30px;
@@ -110,6 +209,8 @@ body {
 }
 .box-doa .doa p {
 	font-weight: bold;
+	position: relative;
+	z-index: 2;
 }
 
 /* SLIDE DUA */
@@ -158,6 +259,19 @@ body {
 /* SLIDE TIGA */
 .slide-tiga {
 	background-color: var(--hijau);
+	position: relative;
+	display: inline-block;
+}
+.slide-tiga::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
 }
 .slide-tiga .box-title {
 	width: var(--width);
@@ -229,6 +343,19 @@ body {
 	border-radius: 20px;
 	padding: 10px 30px 40px 30px;
 	margin: 30px 30px 20px 30px;
+	position: relative;
+}
+.slide-empat .box-transparent::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
+	border-radius: 20px;
 }
 .slide-empat .box-transparent .date .countdown {
 	margin-top: 30px;
@@ -276,6 +403,19 @@ body {
 	padding: 30px 30px 40px 30px;
 	margin: 30px 30px 20px 30px;
 	color: #fff;
+	position: relative;
+}
+.slide-empat .box-transparent-brown::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
+	border-radius: 20px;
 }
 .slide-empat .box-transparent-brown .title-acara {
 	font-family: var(--italiano);
@@ -308,6 +448,19 @@ body {
 /* SLIDE LIMA */
 .slide-lima {
 	background-color: var(--hijau);
+	position: relative;
+	display: inline-block;
+}
+.slide-lima::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
 }
 .slide-lima .box-transparent {
 	content: "";

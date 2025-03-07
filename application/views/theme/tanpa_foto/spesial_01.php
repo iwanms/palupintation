@@ -7,11 +7,12 @@
   $male_index   = strpos($male, ' '); 
   $male_short   = substr($male,0,$male_index);
 
+  $guest        = isset($guest) ? $guest : "";
+
   $hari         = isset($data[0]->hari) ? $data[0]->hari : "";
   $tanggal      = isset($data[0]->tanggal) ? $data[0]->tanggal : "";
   $bulan        = isset($data[0]->bulan) ? $data[0]->bulan : "";
   $tahun        = isset($data[0]->tahun) ? $data[0]->tahun : "";
-
 
 ?>
 
@@ -35,10 +36,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/style.css" />
   </head>
   <body>
-    <section class="box slide-satu">
+    <section class="box slide-pembuka" id="slide-pembuka">
+      <div class="box-transparent">
+        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-open.png">
+        <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
+        <div class="guest">dear, <br>
+        <?=$guest;?></div>
+        <div class="tombol"><a href="#slide-satu" onclick="enableScroll()">Buka Undangan</a></div>
+      </div>
+    </section>
+    <section class="box slide-satu" id="slide-satu">
       <div class="couple">
         <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
       </div>
@@ -46,7 +58,6 @@
         <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
         <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
         <div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>
-        <div class="tombol"><button>Buka Undangan</button></div>
       </div>
     </section>
     <section class="box-doa">
@@ -245,5 +256,44 @@
       <div class="website">Palupintation.com</div>
       <div class="signature">make with 💝</div>
     </section>
+
+
+
+    <script>
+      const rootElement = document.querySelector(":root");  
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto"; 
+      }
+
+      function enableScroll() {
+        // Remove the custom scroll lock
+        window.onscroll = function () {};
+
+        // Enable smooth scrolling globally
+        rootElement.style.scrollBehavior = "smooth";  
+
+        // Hide the 'slide-pembuka' section
+        const slidePembuka = document.getElementById("slide-pembuka");
+        if (slidePembuka) {
+          slidePembuka.style.display = "none";  // Hide the opening section
+        }
+
+        // Optionally, scroll to 'slide-satu' after hiding the 'slide-pembuka'
+        const slideSatu = document.getElementById("slide-satu");
+        if (slideSatu) {
+          slideSatu.scrollIntoView({ behavior: "smooth", block: "start" });  // Smooth scroll to 'slide-satu'
+        }
+      }
+
+      disableScroll();
+    </script>
   </body>
 </html>
