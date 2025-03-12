@@ -37,31 +37,41 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/style.css" />
   </head>
   <body>
     <section class="box slide-pembuka" id="slide-pembuka">
-      <div class="box-transparent">
-        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-open.png">
-        <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
-        <div class="guest">dear, <br>
-        <?=$guest;?></div>
-        <div class="tombol"><a href="#slide-satu" onclick="enableScroll()">Buka Undangan</a></div>
+      <div class="box-transparent" >
+        <div id="fade-in">
+          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-open.png">
+          <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
+          <div class="guest">dear, <br>
+          <?=$guest;?></div>
+          <div class="tombol"><a href="#slide-satu" onclick="enableScroll()">Buka Undangan</a></div>
+        </div>
       </div>
     </section>
+
+    <!-- slide satu -->
     <section class="box slide-satu" id="slide-satu">
-      <div class="couple">
-        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
-      </div>
-      <div class="title">
-        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
-        <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
-        <div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>
+      <div id="fade-in-slide-satu">
+        <div class="couple">
+          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
+        </div>
+        <div class="title">
+          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
+          <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
+          <div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>
+        </div>
       </div>
     </section>
+
     <section class="box-doa">
-      <div class="doa">
+      <div class="doa fade-in">
         “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
         pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan
         merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
@@ -71,15 +81,17 @@
         <p>(QS Ar-Rum : 21)</p>
       </div>
     </section>
+
+    <!-- slide dua  -->
     <section class="box slide-dua">
       <div class="box-transparent">
-        <div class="salam">
+        <div class="salam fade-in">
           <p>Assalamualaikum Wr. Wb</p>
           Tanpa mengurangi rasa hormatkami mengundang Bapak/Ibu/Saudara/i untuk
           menghadiri acara pernikahan kami
         </div>
 
-        <div class="couple">
+        <div class="couple fade-in">
           <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/female.png" />
           <div class="nama">Rossa Amalia Rizqi</div>
           <div class="orang-tua">
@@ -88,9 +100,9 @@
           </div>
         </div>
 
-        <div class="dan">&</div>
+        <div class="dan fade-in">&</div>
 
-        <div class="couple">
+        <div class="couple fade-in">
           <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/male.png" />
           <div class="nama">Iwan Maolana Sidik</div>
           <div class="orang-tua">
@@ -101,9 +113,9 @@
       </div>
     </section>
     <section class="box slide-tiga">
-      <div class="box-title">Cerita Kami</div>
+      <div class="box-title fade-in">Cerita Kami</div>
       <div class="cerita">
-        <div class="box-cerita">
+        <div class="box-cerita fade-in">
           <div class="text">
             <div class="head">Awal Cerita</div>
             <div class="body">
@@ -114,7 +126,7 @@
             </div>
           </div>
         </div>
-        <div class="box-cerita">
+        <div class="box-cerita fade-in">
           <div class="text">
             <div class="head">Tunangan</div>
             <div class="body">
@@ -125,7 +137,7 @@
             </div>
           </div>
         </div>
-        <div class="box-cerita">
+        <div class="box-cerita fade-in">
           <div class="text">
             <div class="head">Pernikahan</div>
             <div class="body">
@@ -139,14 +151,14 @@
       </div>
     </section>
     <section class="box slide-empat">
-      <div class="box-transparent">
+      <div class="box-transparent fade-in">
         <div class="date">
-          <div class="date-title">Save The Date</div>
-          <div class="date-text">
+          <div class="date-title fade-in">Save The Date</div>
+          <div class="date-text fade-in">
             Tanpa mengurangi rasa hormat. Kami mengundang Bapak/Ibu/Saudara/i
             serta Kerabat sekalian untuk menghadiri acara pernikahan kami:
           </div>
-          <div class="countdown">
+          <div class="countdown fade-in">
             <div class="box-time">
               <div class="number">0</div>
               <div class="number-text">Hari</div>
@@ -166,7 +178,7 @@
           </div>
         </div>
       </div>
-      <div class="box-transparent-brown">
+      <div class="box-transparent-brown fade-in">
         <div class="title-acara">Akad Nikah</div>
         <div class="tanggal">Sabtu, 08 Februari 2025</div>
         <div class="jam">Pukul : 08.30 WIB</div>
@@ -179,24 +191,32 @@
         <div class="jam">Pukul : 08.30 WIB</div>
         <div class="alamat">Alamat : Gedung Islamic Centre Subang</div>
       </div>
+      <div class="box-transparent-maps fade-in">
+        <div class="location">Location</div>
+        <div class="maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.760383054254!2d-74.00597238439804!3d40.71277577933126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1f993c7771%3A0x4533ec58f7e8315e!2sOne%20World%20Trade%20Center!5e0!3m2!1sen!2sus!4v1615225943129!5m2!1sen!2sus"
+          style="border:0;" allowfullscreen="" loading="lazy" width="100%" height="100%"></iframe>
+        </div>
+        <div class="tombol"><a href="">Maps</a></div>
+      </div>
     </section>
     <section class="box slide-lima">
-      <div class="box-transparent">
-        <div class="amplop-digital">
+      <div class="box-transparent fade-in">
+        <div class="amplop-digital fade-in">
           <p>Amplop Digital</p>
-          <div class="bank">
+          <div class="bank fade-in">
             <div><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/bca.png" /></div>
             <div class="rekening">01234556789</div>
           </div>
-          <div class="bank">
+          <div class="bank fade-in">
             <div><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/mandiri.webp" /></div>
             <div class="rekening">01234556789</div>
           </div>
         </div>
       </div>
 
-      <div class="box-transparent">
-        <div class="rspv">
+      <div class="box-transparent fade-in">
+        <div class="rspv fade-in">
           <p class="title">Ucapan & Do'a</p>
           <p class="text">
             Berikan ucapan harapan dan do’a <br />kepada kedua mempelai
@@ -211,7 +231,7 @@
               <div>Tidak Hadir</div>
             </div>
           </div>
-          <div class="box-komen">
+          <div class="box-komen fade-in">
             <input type="text" placeholder="Nama" />
             <textarea name="komen" id="komen"></textarea>
             <button>Kirim</button>
@@ -239,14 +259,14 @@
       </div>
     </section>
     <section class="box slide-enam">
-      <div class="box">
-        <div class="penutup">
+      <div class="box fade-in">
+        <div class="penutup fade-in">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
           Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
           kehadiran dan doa restunya, kami mengucapkan terima kasih.
           <br />Kami yang berbahagia,
         </div>
-        <div class="gambar">
+        <div class="gambar fade-in">
           <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
           <div class="nama">Rossa & Iwan</div>
         </div>
@@ -257,43 +277,18 @@
       <div class="signature">make with 💝</div>
     </section>
 
+    <section class="">
+      <div id="audio-container">
+        <audio id="song" autoplay loop>
+          <source src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/audio/sabilulungan.mp3" />
+        </audio>
 
+        <div class="audio-icon-wrapper" style="display: none">
+          <i class="bi bi-disc"></i>
+        </div>
+      </div>
+    </section>
 
-    <script>
-      const rootElement = document.querySelector(":root");  
-
-      function disableScroll() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-        window.onscroll = function () {
-          window.scrollTo(scrollTop, scrollLeft);
-        };
-
-        rootElement.style.scrollBehavior = "auto"; 
-      }
-
-      function enableScroll() {
-        // Remove the custom scroll lock
-        window.onscroll = function () {};
-
-        // Enable smooth scrolling globally
-        rootElement.style.scrollBehavior = "smooth";  
-
-        // Hide the 'slide-pembuka' section
-        const slidePembuka = document.getElementById("slide-pembuka");
-        if (slidePembuka) {
-          slidePembuka.style.display = "none";  // Hide the opening section
-        }
-
-        // Optionally, scroll to 'slide-satu' after hiding the 'slide-pembuka'
-        const slideSatu = document.getElementById("slide-satu");
-        if (slideSatu) {
-          slideSatu.scrollIntoView({ behavior: "smooth", block: "start" });  // Smooth scroll to 'slide-satu'
-        }
-      }
-
-      disableScroll();
-    </script>
+    <script src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/script.js"></script>
   </body>
 </html>

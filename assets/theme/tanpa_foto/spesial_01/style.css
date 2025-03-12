@@ -14,11 +14,29 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 .box {
 	/* min-height: 1080px; fixed height */
 	min-height: 100vh;
 	width: 393px;
+}
+.fade-in {
+	opacity: 0;
+	transform: translateY(20px); /* Start with the element slightly below */
+	transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+	opacity: 1;
+	transform: translateY(0); /* Normal posisi */
+}
+#fade-in {
+	opacity: 0; /* Elemen tidak terlihat pada awalnya */
+	transition: opacity 2s ease-in; /* Efek transisi untuk opacity */
+}
+#fade-in-slide-satu {
+	opacity: 0; /* Elemen tidak terlihat pada awalnya */
+	transition: opacity 1s ease-in; /* Efek transisi untuk opacity */
 }
 .slide-pembuka {
 	background-image: url(img/bg-bunga.jpg);
@@ -99,7 +117,7 @@ body {
 	text-decoration: none;
 	font-family: var(--roboto);
 }
-.slide-pembuka .box-transparent .tombol button:hover {
+.slide-pembuka .box-transparent .tombol a:hover {
 	background-color: #fff;
 	color: var(--coklat);
 }
@@ -140,6 +158,17 @@ body {
 	position: relative;
 	z-index: 2;
 }
+@keyframes zoomInOut {
+	0% {
+		transform: scale(1); /* Ukuran normal pada awalnya */
+	}
+	50% {
+		transform: scale(1.2); /* Zoom In (besar 1.5x dari ukuran normal) */
+	}
+	100% {
+		transform: scale(1); /* Zoom Out kembali ke ukuran normal */
+	}
+}
 .slide-satu .title {
 	display: flex;
 	flex-direction: column;
@@ -150,6 +179,7 @@ body {
 .slide-satu .title img {
 	margin-top: -20px;
 	width: 80px;
+	animation: zoomInOut 3s infinite;
 }
 .slide-satu .title .nama {
 	font-family: var(--italiano);
@@ -444,6 +474,70 @@ body {
 .slide-empat .box-transparent-brown .ornamen img {
 	width: 100px;
 }
+.slide-empat .box-transparent-maps {
+	content: "";
+	background-color: rgb(192, 212, 175, 0.8);
+	color: var(--coklat);
+	text-align: center;
+	border-radius: 20px;
+	padding: 10px 20px 20px 20px;
+	margin: 30px 30px 20px 30px;
+	position: relative;
+}
+.slide-empat .box-transparent-maps::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(img/bg-pattern.jpg);
+	opacity: 0.1;
+	border-radius: 20px;
+}
+.slide-empat .box-transparent-maps .location {
+	color: var(--coklat);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: 5px 0 15px 0;
+	font-family: var(--roboto);
+	margin-top: 5px;
+}
+.slide-empat .box-transparent-maps .maps {
+	margin-bottom: 20px;
+}
+.slide-empat .box-transparent-maps .tombol {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 3;
+}
+.slide-empat .box-transparent-maps .tombol a {
+	background-color: #fff;
+	padding: 10px 20px 10px 20px;
+	border-radius: 20px;
+	border: none;
+	color: var(--coklat);
+	font-weight: bold;
+	font-size: 0.8rem;
+	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.3);
+	width: 60px;
+	height: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-family: var(--roboto);
+}
+.slide-empat .box-transparent-maps .tombol button:hover {
+	background-color: #fff;
+	color: var(--coklat);
+}
 
 /* SLIDE LIMA */
 .slide-lima {
@@ -633,4 +727,32 @@ body {
 .footer .signature {
 	font-size: 0.8rem;
 	font-style: italic;
+}
+.audio-icon-wrapper {
+	position: fixed;
+	bottom: 20px;
+	margin-left: -50px;
+	z-index: 9999;
+	max-width: var(--width); /* Limiting the width to 300px */
+	width: 100%; /* Ensure it scales to 100% of the 300px limit */
+	font-size: 3rem;
+	box-sizing: border-box;
+	cursor: pointer;
+	opacity: 0.5;
+	animation: rotating 4s linear infinite;
+
+	/* poros atau sumbu*/
+	transform-origin: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 0;
+}
+@keyframes rotating {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
