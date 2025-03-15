@@ -15,6 +15,9 @@
   $tanggal      = isset($data[0]->tanggal) ? $data[0]->tanggal : "";
   $bulan        = isset($data[0]->bulan) ? $data[0]->bulan : "";
   $tahun        = isset($data[0]->tahun) ? $data[0]->tahun : "";
+
+  $hadir        = isset($attend[0]->hadir)? $attend[0]->hadir : 0;
+  $tidak_hadir  = isset($attend[0]->tidak_hadir)? $attend[0]->tidak_hadir : 0;
   
 
 setlocale(LC_TIME, 'id_ID.UTF-8');
@@ -227,11 +230,11 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
           </p>
           <div class="box-hadir">
             <div class="hadir">
-              <div>0</div>
+              <div><?=$hadir;?></div>
               <div>Hadir</div>
             </div>
             <div class="hadir">
-              <div>0</div>
+              <div><?=$tidak_hadir;?></div>
               <div>Tidak Hadir</div>
             </div>
           </div>

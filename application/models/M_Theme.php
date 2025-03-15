@@ -35,4 +35,9 @@ class M_Theme extends CI_Model {
         return $query->result();
     }
 
+    function getAttend($url_couple){
+        $query = $this->db->query("SELECT SUM(hadir) hadir, SUM(tidak_hadir) tidak_hadir FROM ( SELECT count(attend) hadir, 0 tidak_hadir FROM tb_comments WHERE id_couple = (SELECT id FROM tb_couple WHERE url_couple = '".$url_couple."') AND attend = 1 GROUP BY id_couple UNION ALL SELECT 0 hadir, count(attend) tidak_hadir FROM tb_comments WHERE id_couple = (SELECT id FROM tb_couple WHERE url_couple = '".$url_couple."') AND attend = 0 GROUP BY id_couple ) AS subquery");
+
+        return $query->result();
+    }
 }

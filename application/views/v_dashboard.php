@@ -149,7 +149,8 @@
                   <p>
                     Rp. 100.000
                   </p>
-                  <a href="<?= base_url(); ?>theme/tanpa_foto_spesial_01" target="_blank">Preview</a>
+                  <!-- <a href="<?= base_url(); ?>rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a> -->
+                  <a href="https://palupintation.com/rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a>
                 </div>
               </div>
             </div>
