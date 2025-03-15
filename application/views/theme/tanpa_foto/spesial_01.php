@@ -1,4 +1,6 @@
 <?php
+  $url_couple   = isset($url_couple) ? $url_couple : "";
+
   $female       = isset($data[0]->female_name) ? $data[0]->female_name : "";
   $female_index = strpos($female, ' '); 
   $female_short = substr($female,0,$female_index);
@@ -13,6 +15,13 @@
   $tanggal      = isset($data[0]->tanggal) ? $data[0]->tanggal : "";
   $bulan        = isset($data[0]->bulan) ? $data[0]->bulan : "";
   $tahun        = isset($data[0]->tahun) ? $data[0]->tahun : "";
+  
+
+setlocale(LC_TIME, 'id_ID.UTF-8');
+    $date = new DateTime(); // Mendapatkan tanggal saat ini
+    $date->modify('+1 day'); // Menambah 1 hari
+    $tanggalSample = $date->format('d ') . strftime('%B', $date->getTimestamp()) . ' ' . $date->format('Y');
+    $hariSample = strftime('%A', $date->getTimestamp()); 
 
 ?>
 
@@ -42,6 +51,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/style.css" />
+
+    <script src="<?= base_url();?>assets/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <section class="box slide-pembuka" id="slide-pembuka">
@@ -65,7 +77,8 @@
         <div class="title">
           <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
           <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
-          <div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>
+          <!--<div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>-->
+          <div class="tanggal"><?=$hariSample?>, <?=$tanggalSample?></div>
         </div>
       </div>
     </section>
@@ -119,10 +132,7 @@
           <div class="text">
             <div class="head">Awal Cerita</div>
             <div class="body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus atque obcaecati laboriosam autem a odit nihil eos
-              magni, est, iusto labore possimus pariatur quia tenetur totam quas
-              nostrum cum facilis.
+                Segala sesuatu yang indah bermula di tahun 2024, saat dua jiwa yang berbeda dipertemukan oleh takdir. Dalam kesederhanaan pertemuan itu, kami mulai merasakan bahwa hidup lebih bermakna ketika dijalani bersama.
             </div>
           </div>
         </div>
@@ -130,10 +140,7 @@
           <div class="text">
             <div class="head">Tunangan</div>
             <div class="body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus atque obcaecati laboriosam autem a odit nihil eos
-              magni, est, iusto labore possimus pariatur quia tenetur totam quas
-              nostrum cum facilis.
+                Hari itu menjadi momen yang sangat spesial. Pada tanggal 26 Oktober 2024, dengan keyakinan penuh, kami mengucap janji untuk melangkah ke tahap berikutnya. Sebuah awal dari perjalanan cinta yang lebih serius menuju ikatan suci.
             </div>
           </div>
         </div>
@@ -141,10 +148,7 @@
           <div class="text">
             <div class="head">Pernikahan</div>
             <div class="body">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repellendus atque obcaecati laboriosam autem a odit nihil eos
-              magni, est, iusto labore possimus pariatur quia tenetur totam quas
-              nostrum cum facilis.
+                Dengan penuh sukacita, kami mengundang Anda untuk hadir dan menjadi saksi atas awal baru dalam kehidupan kami. Pada tanggal 8 Februari 2025, kami akan mengikat janji suci dalam sebuah pernikahan.
             </div>
           </div>
         </div>
@@ -160,19 +164,19 @@
           </div>
           <div class="countdown fade-in">
             <div class="box-time">
-              <div class="number">0</div>
+              <div class="number" id="days">0</div>
               <div class="number-text">Hari</div>
             </div>
             <div class="box-time">
-              <div class="number">0</div>
+              <div class="number" id="hours">0</div>
               <div>Jam</div>
             </div>
             <div class="box-time">
-              <div class="number">0</div>
+              <div class="number" id="minutes">0</div>
               <div>Menit</div>
             </div>
             <div class="box-time">
-              <div class="number">0</div>
+              <div class="number" id="seconds">0</div>
               <div>Detik</div>
             </div>
           </div>
@@ -180,14 +184,14 @@
       </div>
       <div class="box-transparent-brown fade-in">
         <div class="title-acara">Akad Nikah</div>
-        <div class="tanggal">Sabtu, 08 Februari 2025</div>
+        <div class="tanggal"><?=$hariSample?>, <?=$tanggalSample?></div>
         <div class="jam">Pukul : 08.30 WIB</div>
         <div class="alamat">Alamat : Gedung Islamic Centre Subang</div>
 
         <div class="ornamen"><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/G2-ornamen-1.png" alt="" /></div>
 
         <div class="title-acara">Resepsi</div>
-        <div class="tanggal">Sabtu, 08 Februari 2025</div>
+        <div class="tanggal"><?=$hariSample?>, <?=$tanggalSample?></div>
         <div class="jam">Pukul : 08.30 WIB</div>
         <div class="alamat">Alamat : Gedung Islamic Centre Subang</div>
       </div>
@@ -197,7 +201,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.760383054254!2d-74.00597238439804!3d40.71277577933126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1f993c7771%3A0x4533ec58f7e8315e!2sOne%20World%20Trade%20Center!5e0!3m2!1sen!2sus!4v1615225943129!5m2!1sen!2sus"
           style="border:0;" allowfullscreen="" loading="lazy" width="100%" height="100%"></iframe>
         </div>
-        <div class="tombol"><a href="">Maps</a></div>
+        <div class="tombol"><a href="https://maps.app.goo.gl/oNQnvCvcmLuVvjXG9" target="_blank">Buka Maps</a></div>
       </div>
     </section>
     <section class="box slide-lima">
@@ -232,27 +236,17 @@
             </div>
           </div>
           <div class="box-komen fade-in">
-            <input type="text" placeholder="Nama" />
-            <textarea name="komen" id="komen"></textarea>
-            <button>Kirim</button>
+            <input type="hidden" name="url_couple" value="<?=$url_couple;?>">
+            <input type="text" placeholder="Nama" name="name"/>
+            <textarea name="comment" id="comment"></textarea>
+            <select name="attend" id="attend">
+              <option value="1">Hadir</option>
+              <option value="0">Tidak Hadir</option>
+            </select>
+            <button onclick="saveComment()">Kirim</button>
 
-            <div class="komentar">
-              <div class="nama">Iwan</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </div>
-            </div>
-            <div class="komentar">
-              <div class="nama">Valentino Rossi</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </div>
-            </div>
-            <div class="komentar">
-              <div class="nama">Fabio</div>
-              <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </div>
+            <div class="box-komentar" id="box-komentar">
+
             </div>
           </div>
         </div>
@@ -290,5 +284,8 @@
     </section>
 
     <script src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/script.js"></script>
+    <script>
+      const base_url = '<?=base_url();?>';
+    </script>
   </body>
 </html>

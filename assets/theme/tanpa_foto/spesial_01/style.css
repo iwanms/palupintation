@@ -320,7 +320,7 @@ body {
 }
 .slide-tiga .box-cerita {
 	width: 100%;
-	height: 200px;
+	/*height: 200px;*/
 	background-image: url(img/bg-bunga.jpg);
 	background-size: cover;
 	margin-top: 10px;
@@ -354,11 +354,14 @@ body {
 }
 .slide-tiga .box-cerita .text .head {
 	font-family: var(--italiano);
-	font-size: 2rem;
+	font-size: 1.8rem;
 	border-bottom: 1px solid var(--coklat);
 }
 .slide-tiga .box-cerita .text .body {
 	margin-top: 10px;
+	font-family: var(--roboto);
+	font-size: 0.8rem;
+	line-height: 20px;
 }
 
 /* SLIDE EMPAT */
@@ -476,8 +479,8 @@ body {
 }
 .slide-empat .box-transparent-maps {
 	content: "";
-	background-color: rgb(192, 212, 175, 0.8);
-	color: var(--coklat);
+	background-color: rgb(83, 66, 59, 0.8);
+	color: #fff;
 	text-align: center;
 	border-radius: 20px;
 	padding: 10px 20px 20px 20px;
@@ -497,7 +500,7 @@ body {
 	border-radius: 20px;
 }
 .slide-empat .box-transparent-maps .location {
-	color: var(--coklat);
+	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -526,7 +529,7 @@ body {
 	font-weight: bold;
 	font-size: 0.8rem;
 	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.3);
-	width: 60px;
+	width: 80px;
 	height: 10px;
 	display: flex;
 	justify-content: center;
@@ -534,8 +537,8 @@ body {
 	text-decoration: none;
 	font-family: var(--roboto);
 }
-.slide-empat .box-transparent-maps .tombol button:hover {
-	background-color: #fff;
+.slide-empat .box-transparent-maps .tombol a:hover {
+	background-color: var(--hijau);
 	color: var(--coklat);
 }
 
@@ -564,6 +567,8 @@ body {
 	border-radius: 20px;
 	padding: 10px 30px 40px 30px;
 	margin: 30px 30px 20px 30px;
+	position: relative;
+	z-index: 2;
 }
 .slide-lima .box-transparent .amplop-digital {
 	font-family: var(--roboto);
@@ -629,9 +634,24 @@ body {
 .slide-lima .box-transparent .rspv .box-komen {
 	margin-top: 20px;
 }
+.slide-lima .box-transparent .rspv .box-komen .box-komentar {
+	margin-top: 20px;
+	max-height: 300px; /* Menentukan tinggi maksimal kotak */
+	overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
+	padding: 10px;
+	/* border: 1px solid #ccc; */
+	border-radius: 10px;
+	/* background-color: #f9f9f9; */
+}
+.slide-lima .box-transparent .rspv .box-komen .box-komentar::-webkit-scrollbar {
+	width: 0px; /* Menyembunyikan scrollbar */
+	background: transparent; /* Menghilangkan background scrollbar */
+}
 .slide-lima .box-transparent .rspv .box-komen input {
 	width: 80%;
 	padding: 10px;
+	font-family: var(--roboto);
+	font-size: 0.8rem;
 }
 .slide-lima .box-transparent .rspv .box-komen textarea {
 	max-width: 80%;
@@ -639,6 +659,15 @@ body {
 	height: 120px;
 	padding: 10px;
 	margin-top: 20px;
+	font-family: var(--roboto);
+	font-size: 0.8rem;
+}
+.slide-lima .box-transparent .rspv .box-komen select {
+	margin-top: 20px;
+	width: 88%;
+	padding: 10px;
+	font-family: var(--roboto);
+	font-size: 0.8rem;
 }
 .slide-lima .box-transparent .rspv .box-komen button {
 	margin-top: 20px;
@@ -666,7 +695,11 @@ body {
 .slide-lima .box-transparent .rspv .box-komen .komentar .text {
 	font-size: 0.8rem;
 }
-
+.slide-lima .box-transparent .rspv .box-komen .komentar small {
+	font-size: 0.7rem;
+	color: silver;
+	font-style: italic;
+}
 /* SLIDE ENAM */
 .slide-enam {
 	background-image: url(img/bg-bunga4.jpg);

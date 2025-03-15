@@ -18,6 +18,7 @@ class Theme extends CI_Controller {
 
         $data["data"]  = $this->model->get_couple($url_couple);
         $data["guest"] = $to;
+        $data["url_couple"] = $url_couple;
 
         // var_dump($data["data"]); die;
         $this->load->view("theme/tanpa_foto/spesial_01", $data);
