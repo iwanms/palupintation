@@ -1,0 +1,17 @@
+.harga-lama {
+	font-style: italic;
+	font-size: 14px;
+	padding-top: 10px;
+	line-height: 26px;
+	color: red;
+	text-decoration: line-through;
+	text-decoration-style: double;
+}
+.harga-baru {
+	font-style: italic;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	line-height: 26px;
+	color: color-mix(in srgb, var(--default-color), transparent 30%);
+}

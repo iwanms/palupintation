@@ -37,6 +37,7 @@
 
     <!-- Main CSS File -->
     <link href="<?=base_url();?>assets/dashboard/css/main.css" rel="stylesheet" />
+    <link href="<?=base_url();?>assets/dashboard/css/style.css" rel="stylesheet" />
 
     <!-- =======================================================
   * Template Name: Yummy
@@ -146,9 +147,8 @@
                 <div class="member-info">
                   <h4>Spesial 01</h4>
                   <span>Kategori : Tanpa Foto</span>
-                  <p>
-                    Rp. 100.000
-                  </p>
+                  <div class="harga-lama">Rp. 100.00</div>
+                  <div class="harga-baru">Rp. 70.000</div>
                   <!-- <a href="<?= base_url(); ?>rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a> -->
                   <a href="https://palupintation.com/rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a>
                 </div>
