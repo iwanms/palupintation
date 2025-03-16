@@ -177,6 +177,7 @@ function saveComment() {
 				$("#attend")[0].selectedIndex = 0;
 
 				updateComment();
+				updateAttend();
 			} else {
 				Swal.fire({
 					title: "Gagal!",
@@ -212,6 +213,22 @@ function updateComment() {
                 `;
 			});
 			$("#box-komentar").html(HTML);
+		},
+	});
+}
+
+// update attend
+function updateAttend() {
+	const url_couple = $('input[name="url_couple"]').val();
+	let HTML = "";
+	$.ajax({
+		url: base_url + "theme/attend",
+		data: { url_couple },
+		type: "POST",
+		dataType: "JSON",
+		success: function (res) {
+			$("#hadir").html(res.attend[0]["hadir"]);
+			$("#tidak-hadir").html(res.attend[0]["tidak_hadir"]);
 		},
 	});
 }
@@ -270,6 +287,28 @@ function formatDate(dateString) {
 		formattedMinutes;
 
 	return formattedDate;
+}
+
+function clipboard(id) {
+	// Get the input field
+	var copyText = document.getElementById(id);
+	const noRek = copyText.innerText;
+
+	// Copy the text inside the text field
+	navigator.clipboard
+		.writeText(noRek)
+		.then(function () {
+			Swal.fire({
+				text: "Nomor rekening : " + noRek + " telah di copy",
+				customClass: {
+					title: "swal2-title", // Custom class for title
+					htmlContainer: "swal2-html-container", // Custom class for text
+				},
+			});
+		})
+		.catch(function (err) {
+			alert("Failed to copy text: " + err);
+		});
 }
 
 $(document).ready(function () {

@@ -25,4 +25,17 @@ class Theme extends CI_Controller {
         $this->load->view("theme/tanpa_foto/spesial_01", $data);
     }
 
+    function attend(){
+        $url_couple = $this->input->post("url_couple");
+        $attend     = $this->model->getAttend($url_couple);
+        $data = array(
+            'attend' => $attend
+        );
+
+        // Set the response format to JSON
+        $this->output
+             ->set_content_type('application/json')
+             ->set_output(json_encode($data));
+    }
+
 }

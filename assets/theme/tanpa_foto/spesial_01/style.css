@@ -589,6 +589,9 @@ body {
 .slide-lima .box-transparent .amplop-digital .bank .rekening {
 	font-size: 1.1rem;
 }
+.slide-lima .box-transparent .amplop-digital .bank .rek-copy {
+	color: var(--coklat);
+}
 .slide-lima .box-transparent .rspv {
 	font-family: var(--roboto);
 }
@@ -788,4 +791,15 @@ body {
 	to {
 		transform: rotate(360deg);
 	}
+}
+
+/* Sweeet Alert */
+.swal2-title {
+	font-family: "Arial", sans-serif; /* Change to your desired font family */
+	font-size: 24px; /* Change to your desired font size */
+}
+
+.swal2-html-container {
+	font-family: "Arial", sans-serif;
+	font-size: 18px;
 }

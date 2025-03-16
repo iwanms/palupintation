@@ -57,6 +57,9 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
 
     <script src="<?= base_url();?>assets/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="<?= base_url();?>assets/font-awesome/css/all.min.css">
+    <script src="<?= base_url();?>assets/font-awesome/js/all.min.js"></script>
   </head>
   <body>
     <section class="box slide-pembuka" id="slide-pembuka">
@@ -213,11 +216,13 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
           <p>Amplop Digital</p>
           <div class="bank fade-in">
             <div><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/bca.png" /></div>
-            <div class="rekening">01234556789</div>
+            <div class="rekening" id="rek-1">01234556789</div>
+            <a href="javascript:void(0)" onclick="clipboard('rek-1')" class="rek-copy"><i class="fa-solid fa-copy"></i></a>
           </div>
           <div class="bank fade-in">
             <div><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/mandiri.webp" /></div>
-            <div class="rekening">01234556789</div>
+            <div class="rekening" id="rek-2">01234556789</div>
+            <a href="javascript:void(0)" onclick="clipboard('rek-2')" class="rek-copy"><i class="fa-solid fa-copy"></i></a>
           </div>
         </div>
       </div>
@@ -230,11 +235,11 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
           </p>
           <div class="box-hadir">
             <div class="hadir">
-              <div><?=$hadir;?></div>
+              <div id="hadir"><?=$hadir;?></div>
               <div>Hadir</div>
             </div>
             <div class="hadir">
-              <div><?=$tidak_hadir;?></div>
+              <div id="tidak-hadir"><?=$tidak_hadir;?></div>
               <div>Tidak Hadir</div>
             </div>
           </div>
