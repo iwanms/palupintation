@@ -92,9 +92,9 @@
                 Berbagi momen dengan mudah.
               </p>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-                <a href="#book-a-table" class="btn-get-started"
+                <!-- <a href="#book-a-table" class="btn-get-started"
                   >Lihat katalog</a
-                >
+                > -->
               </div>
             </div>
             <div
@@ -137,12 +137,12 @@
                     class="img-fluid"
                     alt=""
                   />
-                  <div class="social">
+                  <!-- <div class="social">
                     <a href=""><i class="bi bi-twitter-x"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="member-info">
                   <h4>Spesial 01</h4>

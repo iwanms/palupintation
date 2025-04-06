@@ -30,80 +30,68 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?=$female_short;?> & <?=$male_short;?></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spesial 02</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/style.css" />
 
     <script src="<?= base_url();?>assets/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <link rel="stylesheet" href="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/style.css" />
+
     <link rel="stylesheet" href="<?= base_url();?>assets/font-awesome/css/all.min.css">
     <script src="<?= base_url();?>assets/font-awesome/js/all.min.js"></script>
-  </head>
-  <body>
-    <section class="box slide-pembuka" id="slide-pembuka">
-      <div class="box-transparent" >
-        <div id="fade-in">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-open.png">
-          <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
-          <div class="guest">dear, <br>
-          <?=$guest;?></div>
-          <div class="tombol"><a href="#slide-satu" onclick="enableScroll()">Buka Undangan</a></div>
+</head>
+<body>
+    <section class="box slide-opening bg-dua" id="slide-pembuka">
+        <div class="image-and-name">
+            <img src="<?=base_url();?>assets/theme/tanpa_foto/spesial_02/img/couple.png" alt="couple">
+            <div class="name"><?=$female_short;?> & <?=$male_short;?></div>
         </div>
-      </div>
+        <div class="guest">
+            <div>dear,</div>
+            <div><?=$guest;?></div>
+        </div>
+        <div class="button">
+            <button class="btn-black" onclick="enableScroll()">Buka Undangan</button>
+        </div>
     </section>
 
-    <!-- slide satu -->
-    <section class="box slide-satu" id="slide-satu">
-      <div id="fade-in-slide-satu">
-        <div class="couple">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
+    <section class="box slide-satu" id="fade-in-slide-satu">
+        <div class="name-couple">
+            <div><?=$female_short;?> & <?=$male_short;?></div>
+            <div><?=$hariSample?>, <?=$tanggalSample?></div>
         </div>
-        <div class="title">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/wayang-brown.png" />
-          <div class="nama"><?=$female_short;?> & <?=$male_short;?></div>
-          <!--<div class="tanggal"><?=$hari;?>, <?=$tanggal;?> <?=$bulan;?> <?=$tahun;?></div>-->
-          <div class="tanggal"><?=$hariSample?>, <?=$tanggalSample?></div>
-        </div>
-      </div>
     </section>
 
-    <section class="box-doa">
-      <div class="doa fade-in">
-        “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-        pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan
-        merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
-        sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
-        (kebesaran Allah) bagi kaum yang berpikir”
-        <br />
-        <p>(QS Ar-Rum : 21)</p>
-      </div>
+    <section class="slide-dua">
+        <div class="doa fade-in">
+            “Dan di antara tanda-tanda (kebesaran)-Nya, ialah Dia menciptakan
+            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan
+            merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+            sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda
+            (kebesaran Allah) bagi kaum yang berpikir”
+            <br>
+            <p>(QS Ar-Rum : 21)</p>
+        </div>
     </section>
 
-    <!-- slide dua  -->
-    <section class="box slide-dua">
-      <div class="box-transparent">
+    <section class="box slide-tiga">
+      <div class="transparent">
         <div class="salam fade-in">
           <p>Assalamualaikum Wr. Wb</p>
           Tanpa mengurangi rasa hormatkami mengundang Bapak/Ibu/Saudara/i untuk
@@ -111,8 +99,8 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         </div>
 
         <div class="couple fade-in">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/female.png" />
-          <div class="nama">Rossa Amalia Rizqi</div>
+          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/img/tema_2_female.png" />
+          <div class="nama"><?=$female;?></div>
           <div class="orang-tua">
             Putri Bapak Nama Bapak<br />
             & Ibu Nama Ibu
@@ -122,8 +110,8 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         <div class="dan fade-in">&</div>
 
         <div class="couple fade-in">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/male.png" />
-          <div class="nama">Iwan Maolana Sidik</div>
+          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/img/tema_2_male.png" />
+          <div class="nama"><?=$male;?></div>
           <div class="orang-tua">
             Putri Bapak Nama Bapak<br />
             & Ibu Nama Ibu
@@ -131,7 +119,8 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         </div>
       </div>
     </section>
-    <section class="box slide-tiga">
+
+    <section class="box slide-empat">
       <div class="box-title fade-in">Cerita Kami</div>
       <div class="cerita">
         <div class="box-cerita fade-in">
@@ -160,7 +149,8 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         </div>
       </div>
     </section>
-    <section class="box slide-empat">
+
+    <section class="box slide-lima">
       <div class="box-transparent fade-in">
         <div class="date">
           <div class="date-title fade-in">Save The Date</div>
@@ -175,20 +165,21 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
             </div>
             <div class="box-time">
               <div class="number" id="hours">0</div>
-              <div>Jam</div>
+              <div class="number-text">Jam</div>
             </div>
             <div class="box-time">
               <div class="number" id="minutes">0</div>
-              <div>Menit</div>
+              <div class="number-text">Menit</div>
             </div>
             <div class="box-time">
               <div class="number" id="seconds">0</div>
-              <div>Detik</div>
+              <div class="number-text">Detik</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="box-transparent-brown fade-in">
+
+      <div class="box-transparent-biru fade-in">
         <div class="title-acara">Akad Nikah</div>
         <div class="tanggal"><?=$hariSample?>, <?=$tanggalSample?></div>
         <div class="jam">Pukul : 08.30 WIB</div>
@@ -201,19 +192,20 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         <div class="jam">Pukul : 08.30 WIB</div>
         <div class="alamat">Alamat : Gedung Islamic Centre Subang</div>
       </div>
-      <div class="box-transparent-maps fade-in">
-        <div class="location">Location</div>
-        <div class="maps">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.745350443343!2d107.75640937531423!3d-6.553798893439252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e693c80bf858333%3A0x6555a6e39e86099c!2sIslamic%20Centre!5e0!3m2!1sid!2sid!4v1742134780485!5m2!1sid!2sid"
-          style="border:0;" allowfullscreen="" loading="lazy" width="100%" height="100%"></iframe>
-        </div>
-        <div class="tombol"><a href="https://maps.app.goo.gl/oNQnvCvcmLuVvjXG9" target="_blank">Buka Maps</a></div>
-      </div>
     </section>
-    <section class="box slide-lima">
-      <div class="box-transparent fade-in">
+
+    <section class="slide-enam">  
+      <div class="maps">
+        <div class="title fade-in">Location</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.745350443343!2d107.75640937531423!3d-6.553798893439252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e693c80bf858333%3A0x6555a6e39e86099c!2sIslamic%20Centre!5e0!3m2!1sid!2sid!4v1742134780485!5m2!1sid!2sid"
+          style="border:0;" allowfullscreen="" loading="lazy" width="100%" height="200px">
+        </iframe>
+        <div class="tombol">
+          <a href="https://maps.app.goo.gl/oNQnvCvcmLuVvjXG9" target="_blank">Buka Maps</a>
+        </div>
+
+        <div class="amplop-title">Amplop Digital</div>
         <div class="amplop-digital fade-in">
-          <p>Amplop Digital</p>
           <div class="bank fade-in">
             <div><img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/bca.png" /></div>
             <div class="rekening" id="rek-1">01234556789</div>
@@ -226,7 +218,9 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
           </div>
         </div>
       </div>
+    </section>
 
+    <section class="box slide-tujuh">
       <div class="box-transparent fade-in">
         <div class="rspv fade-in">
           <p class="title">Ucapan & Do'a</p>
@@ -260,28 +254,25 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
         </div>
       </div>
     </section>
-    <section class="box slide-enam">
-      <div class="box fade-in">
-        <div class="penutup fade-in">
-          Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
-          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
-          kehadiran dan doa restunya, kami mengucapkan terima kasih.
-          <br />Kami yang berbahagia,
-        </div>
-        <div class="gambar fade-in">
-          <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/img/couple-circle.png" />
-          <div class="nama">Rossa & Iwan</div>
-        </div>
+
+    <section class="box slide-delapan">
+      <div class="gambar fade-in">
+        <div class="nama">Rossa & Iwan</div>
+        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/img/couple-circle.png" alt="gambar-penutup">
       </div>
-    </section>
-    <section class="footer">
-      <div class="website">Palupintation.com</div>
-      <div class="signature">make with 💝</div>
+      <div class="penutup fade-in">
+        Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila
+        Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas
+        kehadiran dan doa restunya, kami mengucapkan terima kasih.
+      </div>
+      <div class="footer fade-in">
+        <img src="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/img/palupintation.png" alt="palupintation.com">
+      </div>
     </section>
 
     <section class="">
       <div id="audio-container">
-        <audio id="song" autoplay loop>
+        <audio id="song" loop>
           <source src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/audio/sabilulungan.mp3" />
         </audio>
 
@@ -291,9 +282,10 @@ setlocale(LC_TIME, 'id_ID.UTF-8');
       </div>
     </section>
 
-    <script src="<?= base_url();?>assets/theme/tanpa_foto/spesial_01/script.js"></script>
+
+    <script src="<?= base_url();?>assets/theme/tanpa_foto/spesial_02/script.js"></script>
     <script>
       const base_url = '<?=base_url();?>';
     </script>
-  </body>
+</body>
 </html>

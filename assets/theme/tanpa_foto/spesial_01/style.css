@@ -591,6 +591,15 @@ body {
 }
 .slide-lima .box-transparent .amplop-digital .bank .rek-copy {
 	color: var(--coklat);
+	height: 20px;
+	width: 20px;
+	border: 1px solid var(--coklat);
+	padding: 5px;
+	border-radius: 5px;
+}
+.slide-lima .box-transparent .amplop-digital .bank .rek-copy:hover {
+	color: #fff;
+	background-color: var(--coklat);
 }
 .slide-lima .box-transparent .rspv {
 	font-family: var(--roboto);

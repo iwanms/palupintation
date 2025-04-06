@@ -61,33 +61,7 @@ audioIconWrapper.onclick = function () {
 	isPlaying = !isPlaying;
 };
 
-audioIconWrapper.onclick = function () {
-	if (isPlaying) {
-		song.pause();
-		audioIcon.classList.remove("bi-disc");
-		audioIcon.classList.add("bi-pause-circle");
-	} else {
-		song.play();
-		audioIcon.classList.remove("bi-pause-circle");
-		audioIcon.classList.add("bi-disc");
-	}
-
-	isPlaying = !isPlaying;
-};
-
 disableScroll();
-
-// animasi fade in on scroll
-// const titleTest = document.querySelector('.slide-satu .title');
-
-// document.addEventListener("scroll", function(){
-//   titleTest.classList.add("")
-// })
-
-window.onload = function () {
-	const paragraph = document.getElementById("fade-in");
-	paragraph.style.opacity = 1; // Mengubah opacity menjadi 1 untuk menampilkan paragraf
-};
 
 window.addEventListener("scroll", function () {
 	const fadeElements = document.querySelectorAll(".fade-in");
