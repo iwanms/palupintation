@@ -46,6 +46,26 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+  #text-berubah {
+    display: inline-block; /* Penting agar transisi vertikal bekerja dengan baik */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Tambahkan transisi */
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #text-berubah.slide-out-up {
+    transform: translateY(-10px); /* Geser sedikit ke atas */
+    opacity: 0;
+  }
+
+  #text-berubah.slide-in-down {
+    transform: translateY(10px); /* Geser sedikit ke bawah */
+    opacity: 0;
+  }
+  </style>
+
   </head>
 
   <body class="index-page">
@@ -89,7 +109,7 @@
             >
               <h1 data-aos="fade-up">Undangan Digital</h1>
               <p data-aos="fade-up" data-aos-delay="100">
-                Berbagi momen dengan mudah.
+                Berbagi momen dengan <b class="text-danger" id="text-berubah">mudah.</b>
               </p>
               <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
                 <!-- <a href="#book-a-table" class="btn-get-started"
@@ -102,7 +122,7 @@
               data-aos="zoom-out"
             >
               <img
-                src="<?=base_url();?>assets/dashboard/img/mockup-android-red.png"
+                src="<?=base_url();?>assets/dashboard/img/banner.png"
                 class="img-fluid animated"
                 alt=""
               />
@@ -125,15 +145,11 @@
 
         <div class="container">
           <div class="row gy-3">
-            <div
-              class="col-lg-3 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="team-member">
                 <div class="member-img">
                   <img
-                    src="<?=base_url();?>assets/dashboard/img/tema/tema1.jpg"
+                    src="<?=base_url();?>assets/dashboard/img/tema/spesial_01.jpg"
                     class="img-fluid"
                     alt=""
                   />
@@ -150,11 +166,38 @@
                   <div class="harga-lama">Rp. 100.00</div>
                   <div class="harga-baru">Rp. 70.000</div>
                   <!-- <a href="<?= base_url(); ?>rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a> -->
-                  <a href="https://palupintation.com/rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a>
+                  <a href="https://palupintation.com/rossa-iwan/spesial_01?to=Tamu+Undangan" target="_blank">Preview</a>
                 </div>
               </div>
             </div>
-            <!-- End Chef Team Member -->
+            <!-- End Card -->
+
+            <div class="col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="team-member">
+                <div class="member-img">
+                  <img
+                    src="<?=base_url();?>assets/dashboard/img/tema/spesial_02.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <!-- <div class="social">
+                    <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div> -->
+                </div>
+                <div class="member-info">
+                  <h4>Spesial 02</h4>
+                  <span>Kategori : Tanpa Foto</span>
+                  <div class="harga-lama">Rp. 100.00</div>
+                  <div class="harga-baru">Rp. 70.000</div>
+                  <!-- <a href="<?= base_url(); ?>rossa-iwan?to=Tamu+Undangan" target="_blank">Preview</a> -->
+                  <a href="https://palupintation.com/rossa-iwan/spesial_02?to=Tamu+Undangan" target="_blank">Preview</a>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
           </div>
         </div>
       </section>
@@ -184,5 +227,30 @@
 
     <!-- Main JS File -->
     <script src="<?=base_url();?>assets/dashboard/js/main.js"></script>
+
+    <script>
+      function changeText() {
+        const textElement = document.getElementById("text-berubah");
+        if (textElement) {
+          textElement.classList.add("slide-out-up");
+
+          setTimeout(() => {
+            if (textElement.textContent === "mudah") {
+              textElement.textContent = "murah.";
+            } else {
+              textElement.textContent = "mudah.";
+            }
+            textElement.classList.remove("slide-out-up");
+            textElement.classList.add("slide-in-down");
+
+            setTimeout(() => {
+              textElement.classList.remove("slide-in-down");
+            }, 300);
+          }, 300);
+        }
+      }
+
+      const intervalId = setInterval(changeText, 2000);
+    </script>
   </body>
 </html>
