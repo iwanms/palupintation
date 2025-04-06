@@ -64,6 +64,49 @@
     transform: translateY(10px); /* Geser sedikit ke bawah */
     opacity: 0;
   }
+  footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer p {
+    font-weight:bold;
+  }
+  .whatsapp-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #25D366; /* Warna hijau WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 260px;
+  }
+  .whatsapp-button:hover {
+    background-color: #128C7E; /* Warna hijau WhatsApp lebih gelap saat hover */
+  }
+  .telegram-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #229ED9; /* Warna biru Telegram */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 260px;
+  }
+  .telegram-button:hover {
+    background-color: #177EBE; /* Warna biru Telegram lebih gelap saat hover */
+  }
   </style>
 
   </head>
@@ -204,7 +247,19 @@
       <!-- /Chefs Section -->
     </main>
 
-    <footer id="footer" class="footer dark-background"></footer>
+    <footer id="footer" class="footer dark-background">
+      <p>Palupintation.com</p>
+      <div class="mb-3">
+        <a href="https://wa.me/6282319334003" target="_blank" rel="noopener noreferrer">
+          <button class="whatsapp-button"><i class="bi bi-whatsapp"></i>&nbsp; Chat Admin via WhatsApp</button>
+        </a>
+      </div>
+      <!-- <div>
+        <a href="https://t.me/username_telegram_admin" target="_blank" rel="noopener noreferrer">
+          <button class="telegram-button"><i class="bi bi-telegram"></i>&nbsp; Chat Admin via Telegram</button>
+        </a>
+      </div> -->
+    </footer>
 
     <!-- Scroll Top -->
     <a
